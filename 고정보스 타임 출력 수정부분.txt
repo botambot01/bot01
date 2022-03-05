@@ -1,0 +1,18 @@
+	################ 보스타임 출력 ################ 
+	@commands.command(name=command[22][0], aliases=command[22][1:])
+	async def bossTime_(self, ctx):
+		if ctx.message.channel.id == basicSetting[7]:
+			datelist = []
+			datelist2 = []
+			ouput_bossData = []
+			aa = []
+			
+			for i in range(bossNum):
+				if bossMungFlag[i] == True :
+					datelist2.append(tmp_bossTime[i])
+				else :
+					datelist2.append(bossTime[i])
+
+			for i in range(fixed_bossNum):
+				if fixed_bossTime[i] < datetime.datetime.now() + datetime.timedelta(hours=int(basicSetting[0])+24):<----------요기 기본 3시간
+					datelist2.append(fixed_bossTime[i])
